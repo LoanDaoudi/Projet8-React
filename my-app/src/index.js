@@ -8,7 +8,7 @@ import HomePage from './Front-end/HomePage';
 import IntelHome from './Front-end/IntelHome';
 import ErrorPage from './Front-end/ErrorPage';
 import GlobalIntel from './Front-end/GlobalIntel';
-import data from './logements.json';
+import data from './Front-end/logements.json';
 
 
 
@@ -30,5 +30,4 @@ ReactDOM.render(
 );
 
 reportWebVitals();
-
 

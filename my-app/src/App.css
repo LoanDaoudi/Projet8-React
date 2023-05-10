@@ -79,22 +79,31 @@ header nav a{
   height: 340px;
   border-radius: 10px;
   background-color: #FF6060;
+  
+}
+
+.card img{
+  width: 340px;
+  height: 340px;
+  border-radius: 10px;
+  object-fit: cover;
 }
 
 .card h3{
+  
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 500;
   color: #FFFFFF;
   display: flex;
   position: relative;
-  bottom: -250px;
-  margin-left: 15px;
+  bottom: 75px;
+  left: 15px;
+  
 }
 
 .cardcontenainer{
   width: 1240px;
-  height: 829px;
   margin: auto;
   border-radius: 25px;
   background-color: #F6F6F6;
@@ -104,6 +113,8 @@ header nav a{
   justify-content: center;
   flex-wrap: wrap;
   gap: 60px;
+  padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 .cardcontenainer a{
@@ -368,7 +379,7 @@ margin-bottom: 25px;
   color: #FF6060;
 }
 
-.Profilepicture{
+.Profilepicture img{
   width: 64px;
   height: 64px;
   background: #C4C4C4;

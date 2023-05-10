@@ -6,17 +6,21 @@ import Onglet from './Component/OngletIntelHome';
 import Tag from './Component/Tag';
 import Host from './Component/Host';
 import Stars from './Component/RatingStars';
+import IntelName from './Component/IntelName';
+import data from './logements.json';
+
 const IntelHome = () => {
+
   return (
+
     <div>
       <Header />
       <Carrousel />
       <div className='undercarrousel'>
         <div className='leftunder'>
-            <div className='HomeIntelContent'>
-                <h1>Cozy loft on the Canal Saint-Martin</h1>
-                <p>Paris, Île-de-France</p>
-            </div>
+            {data.map((entry) => (
+        <IntelName key={entry.id} data={entry} />
+      ))}
             <div className='tag'>
               <Tag text="Cozy"/>
               <Tag text="Canal"/>
@@ -24,7 +28,9 @@ const IntelHome = () => {
             </div>
         </div>
         <div className='rightunder'>
-              <Host text="Alexandre Dumas"/>
+        {data.map((entry) => (
+        <Host key={entry.id} text={entry} />
+      ))}
               <div className='ratingstars'>
               <Stars count={3}/>
             </div>
