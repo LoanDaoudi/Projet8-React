@@ -1,18 +1,34 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import HomePage from './Front-end/HomePage';
+import IntelHome from './Front-end/IntelHome';
+import ErrorPage from './Front-end/ErrorPage';
+import GlobalIntel from './Front-end/GlobalIntel';
+import data from './logements.json';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
+
+
+ReactDOM.render(
+  <BrowserRouter>
+    <div className="App">
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/intel" element={<IntelHome />} />
+        <Route path="/about" element={<GlobalIntel />} />
+        <Route path="/error" element={<ErrorPage />} />
+        {/* Route par défaut pour les URL incorrectes */}
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </div>
     <App />
-  </React.StrictMode>
+  </BrowserRouter>,
+  document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
 

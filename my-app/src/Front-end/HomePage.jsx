@@ -1,12 +1,18 @@
 import React from 'react';
-import Header from './Header';
+import Header from './Component/Header';
+import Banner from './Component/Banner';
+import Footer from './Component/Footer';
+import Cards from './Component/Cards';
 
 const HomePage = () => {
   return (
     <div>
       <Header />
-      <h1>Contenu de la page d'accueil</h1>
-      {/* Autres éléments de la page */}
+      <Banner />
+      <div className='cardcontenainer'>
+      <Cards /><Cards /><Cards /><Cards /><Cards /><Cards />
+      </div>
+      <Footer />
     </div>
   );
 };
