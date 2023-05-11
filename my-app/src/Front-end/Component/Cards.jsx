@@ -1,12 +1,19 @@
 import React from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 
-const Cards = ({ data, onClick }) => {
+const Cards = ({ data }) => {
+  const navigate = useNavigate();
+
+  const handleCardClick = () => {
+    navigate(`/intel/${data.id}`);
+  };
+
   return (
     <div className='card'>
-    <a href="/intel" onClick={() => onClick(data.id)}>
-    <img src={data.cover} alt={data.title} />
+      <Link to={`/intel/${data.id}`} onClick={handleCardClick}>
+        <img src={data.cover} alt={data.title} />
         <h3>{data.title}</h3>
-      </a>
+      </Link>
     </div>
   );
 };

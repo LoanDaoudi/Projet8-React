@@ -1,0 +1,12 @@
+// To Do List du Projet 8 React //
+
+	
+		
+
+		- Caroussel Fonctionnel et responsive 
+	
+		- Onglet ouvrable et fermable 
+
+		-Page à Propos compléter le texte des differents onglets 
+
+		Faire le responsive Design version tablette et Phone

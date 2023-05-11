@@ -1,4 +1,5 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 import Header from './Component/Header';
 import Footer from './Component/Footer';
 import Carrousel from './Component/Carrousel';
@@ -10,44 +11,36 @@ import IntelName from './Component/IntelName';
 import data from './logements.json';
 
 const IntelHome = () => {
+  const { id } = useParams();
+
+  // Recherche des données correspondantes à l'ID
+  const selectedData = data.find((item) => item.id === id);
+
+  if (!selectedData) {
+    return <div>Aucune donnée trouvée pour cet ID.</div>;
+  }
 
   return (
-
     <div>
       <Header />
       <Carrousel />
       <div className='undercarrousel'>
-        <div className='leftunder'>
-            {data.map((entry) => (
-        <IntelName key={entry.id} data={entry} />
-      ))}
-            <div className='tag'>
-              <Tag text="Cozy"/>
-              <Tag text="Canal"/>
-              <Tag text="Paris 10"/>
-            </div>
-        </div>
+          <div className='leftunder'>
+            <IntelName data={selectedData} />
+              <Tag text={selectedData.tags} />
+          </div>
         <div className='rightunder'>
-        {data.map((entry) => (
-        <Host key={entry.id} text={entry} />
-      ))}
-              <div className='ratingstars'>
-              <Stars count={3}/>
-            </div>
+          <Host text={selectedData} />
+          <div className='ratingstars'>
+          <Stars count={parseInt(selectedData.rating)} />
+          </div>
         </div>
       </div>
       <div className='OngletIntelPage'>
-        <Onglet  title="Description" text="Vous serez à 50cm
-        du canal Saint-martin où vous pourrez pique-niquer l'été et à coté de nombreux
-        bars et restaurants.Au coeur de PAris avec 5 lignes de métro et de nom
-        nombreux bus. Logement parfait pour les voyageurs en solo et les voyageurs d'affaires.
-        Vous êtes à 1 station de la gare de l'est 
-        (7 minutes à pied)." /> 
-        <Onglet title="Equipements"/>
+        <Onglet title='Description' text={selectedData.description} />
+        <Onglet title='Équipements' text={selectedData.equipments} />
       </div>
-
       <Footer />
-      
     </div>
   );
 };

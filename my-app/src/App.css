@@ -250,11 +250,11 @@ margin-bottom: 30px;
 }
 .tag{
   display: flex;
-  gap:25px;
-margin-top: 25px;
-margin-bottom: 25px;
-
+  margin-top: 20px;
+  margin-bottom: 20px;
+  gap: 10px;
 }
+
 .tagcontainer{
   width: 115px;
   height: 25px;
@@ -267,9 +267,11 @@ margin-bottom: 25px;
 
 .tagcontainer p{
   font-family: 'Montserrat', sans-serif;
-  font-size: 14px;
+  font-size: 0.7em;
   font-weight: 500;
   color: #FFFFFF;
+  display: flex;
+  
 }
 
 .OngletIntelPage{
@@ -299,7 +301,9 @@ margin-bottom: 25px;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 500;
+  margin: 0;
   margin-left: 15px;
+  margin-top: 15px;
 }
 .ongleHometitle img{
   margin-right: 15px;
@@ -315,11 +319,24 @@ margin-bottom: 25px;
   font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 400;
-  margin: 0;
   padding-left: 15px;
   padding-top: 15px;
   color: #FF6060
 }
+
+.ongletHomecontent li{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  padding-left: 15px;
+  padding-top: 15px;
+  color: #FF6060
+}
+
+.ongletHomecontent ul{
+  list-style-type: none;
+}
+
 
 .HomeIntelContent{
  display: flex;

@@ -17,7 +17,7 @@ ReactDOM.render(
     <div className="App">
       <Routes>
         <Route path="/" element={<HomePage />} />
-        <Route path="/intel" element={<IntelHome />} />
+        <Route path="/intel/:id" element={<IntelHome />} />
         <Route path="/about" element={<GlobalIntel />} />
         <Route path="/error" element={<ErrorPage />} />
         {/* Route par défaut pour les URL incorrectes */}
