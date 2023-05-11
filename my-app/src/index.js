@@ -10,8 +10,6 @@ import ErrorPage from './Front-end/ErrorPage';
 import GlobalIntel from './Front-end/GlobalIntel';
 import data from './Front-end/logements.json';
 
-
-
 ReactDOM.render(
   <BrowserRouter>
     <div className="App">
@@ -20,14 +18,12 @@ ReactDOM.render(
         <Route path="/intel/:id" element={<IntelHome />} />
         <Route path="/about" element={<GlobalIntel />} />
         <Route path="/error" element={<ErrorPage />} />
-        {/* Route par défaut pour les URL incorrectes */}
         <Route path="*" element={<ErrorPage />} />
       </Routes>
+      <App />
     </div>
-    <App />
   </BrowserRouter>,
   document.getElementById('root')
 );
 
 reportWebVitals();
-

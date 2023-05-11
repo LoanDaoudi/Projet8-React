@@ -1,28 +1,33 @@
-import React from 'react';
+import React, { useState } from 'react';
 import flechelow from './Images/flechelow.png';
 import flechehigh from './Images/flechehigh.png';
+
 const Onglet = ({ title, text }) => {
-    // Vérifier si le texte est défini
-    const isTextVisible = text !== undefined && text !== null;
-  
-    return (
-      <div className='onglet'>
-        <div className='ongletitle'>
-          <h3>{title}</h3>
-          {isTextVisible ? (
-            <img src={flechehigh} alt="flechehigh" />
-          ) : (
-            <img src={flechelow} alt="flechelow" />
-          )}
-        </div>
-        {isTextVisible && (
-          <div className='ongletcontent'>
-            <p>{text}</p>
-          </div>
+  const [isContentVisible, setIsContentVisible] = useState(false);
+
+  const toggleContentVisibility = () => {
+    setIsContentVisible(!isContentVisible);
+  };
+
+  const isTextVisible = text !== undefined && text !== null;
+
+  return (
+    <div className='onglet'>
+      <div className='ongletitle' onClick={toggleContentVisibility}>
+        <h3>{title}</h3>
+        {isContentVisible ? (
+          <img src={flechehigh} alt='flechehigh' />
+        ) : (
+          <img src={flechelow} alt='flechelow' />
         )}
       </div>
-    );
-  };
-  
-  export default Onglet;
-  
+      {isContentVisible && isTextVisible && (
+        <div className='ongletcontent'>
+          <p>{text}</p>
+        </div>
+      )}
+    </div>
+  );
+};
+
+export default Onglet;

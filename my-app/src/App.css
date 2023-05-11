@@ -160,17 +160,19 @@ margin-left: 970px;
 .ongletcontainer{
   display: flex;
   flex-direction: column;
+  text-align: start;
   gap: 10px;
   margin-bottom: 150px;
 }
 
-.flechehigh{
-  display: none;
+.ongletcontainer :hover{
+  cursor: pointer;
 }
+
+
 
 .ongletcontent{
   width: 1023px;
-  height: 146px;
   border-radius: 5px;
   background-color: #F6F6F6;
 }
@@ -179,6 +181,7 @@ margin-left: 970px;
   font-family: 'Montserrat', sans-serif;
   font-size: 24px;
   font-weight: 400;
+  margin: 5px 5px 5px 5px;
 }
 
 .errorcontainer{
@@ -240,18 +243,20 @@ margin-bottom: 30px;
  width: 46.68px;
  height: 79.2px;
  padding-left: 15px;
+ cursor: pointer;
 }
 .arrowdroite{
   position: absolute;
    right: 0;
   top: 50%;
   transform: translateY(-50%);
-  padding-right: 15px;
+  padding-right: 5px;
+  cursor: pointer;
 }
 .tag{
   display: flex;
   margin-top: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   gap: 10px;
 }
 
@@ -281,13 +286,19 @@ margin-bottom: 30px;
   margin-bottom: 340px;
   height: 249px;
 }
+.OngletIntelPage :hover{
+  cursor: pointer;
+}
 .ongletIntelHome{
   width: 582px;
   height: 52px;
   border-radius: 10px;
   background-color: #FF6060;
   color: #FFFFFF;
-  
+}
+
+.ongletIntelHome img{
+  margin-top: 15px;
 }
 
 .ongleHometitle{
@@ -422,4 +433,15 @@ margin-bottom: 30px;
   width: 24.75px;
   height: 24px;
   margin-right: 5px;
+}
+
+.photo-number p{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 30px;
+  color: #FFFFFF;
+  position: relative;
+  right: 620px;
+  top: 330px;
+
 }

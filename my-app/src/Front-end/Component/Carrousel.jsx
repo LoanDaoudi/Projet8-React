@@ -1,15 +1,41 @@
-import React from 'react';
+import React, { useState } from 'react';
 import flechedroite from './Images/flechedroite.png';
 import flechegauche from './Images/flechegauche.png';
-import Appart from './Images/Appart.png';
 
-const Carrousel = ({}) => {
-    return ( 
-            <div className='carrouselcontainer'>
-                <img src={flechegauche} className='arrowgauche' alt="Image 1" />
-                <img src={Appart} className='backimg' alt="Image 3" />
-                <img src={flechedroite} className='arrowdroite' alt="Image 2" />
-            </div>   
-    )
-}
+
+const Carrousel = ({ images }) => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+  
+    const goToPrevious = () => {
+      setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    };
+  
+    const goToNext = () => {
+      setCurrentIndex((prevIndex) => (prevIndex === images.length - 1 ? 0 : prevIndex + 1));
+    };
+
+    const currentNumber = currentIndex + 1;
+  const totalNumber = images.length;
+  
+    return (
+      <div className='carrouselcontainer'>
+        <img
+          src={flechegauche}
+          className='arrowgauche'
+          alt='Image précédente'
+          onClick={goToPrevious}
+        />
+        <img src={images[currentIndex]} className='backimg' alt={`Image ${currentIndex + 1}`} />
+        <img
+          src={flechedroite}
+          className='arrowdroite'
+          alt='Image suivante'
+          onClick={goToNext}
+        />
+              <div className='photo-number'><p>{`${currentNumber}/${totalNumber}`}</p></div>
+
+      </div>
+    );
+  };
+
 export default Carrousel;

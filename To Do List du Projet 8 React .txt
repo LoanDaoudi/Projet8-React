@@ -3,10 +3,14 @@
 	
 		
 
-		- Caroussel Fonctionnel et responsive 
+		- Caroussel Fonctionnel et responsive /// DONE 
 	
-		- Onglet ouvrable et fermable 
+		- Onglet ouvrable et fermable /// DONE =====================> A voir pour mettre une animation d'apparition et de disparition 
 
-		-Page à Propos compléter le texte des differents onglets 
+		- Page à Propos compléter le texte des differents onglets /// DONE 
 
-		Faire le responsive Design version tablette et Phone
+		- Faire le responsive Design version tablette et Phone
+
+		- Redirection vers page error 404 lorsque l'id est inexistant ///DONE
+
+		- Texte banner plus visible actuellemnt blanc/surblanc
