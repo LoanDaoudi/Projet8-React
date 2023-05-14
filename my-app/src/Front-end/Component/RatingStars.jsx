@@ -6,7 +6,7 @@ const Stars = ({ count }) => {
   const maxStars = 5;
 
   return (
-    <div>
+    <div >
       {[...Array(maxStars)].map((_, index) =>
         index < count ? (
           <FontAwesomeIcon key={index} icon={faStar} className='starred' />

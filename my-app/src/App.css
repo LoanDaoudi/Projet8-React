@@ -25,6 +25,10 @@ header nav a{
   color: #FF6060;
 }
 
+ nav li:hover{
+  border-bottom: 2px solid #FF6060;
+}
+
 .banner{
   width: 1240px;
   height: 223px;
@@ -60,6 +64,7 @@ header nav a{
   width: 1440px;
   height: 209px;
   margin: auto;
+  margin-bottom: 0;
   background-color: #000000;
   display: flex;
   flex-direction: column;
@@ -219,7 +224,7 @@ margin-left: 970px;
 }
 .carrouselcontainer{
   width: 1240px;
-  height: 415px;
+  max-height: 415px;
   border-radius: 25px;
   margin: auto;
 display: flex;
@@ -229,28 +234,27 @@ margin-bottom: 30px;
 }
 
 .backimg{
-  width: 1240px;
-  height: 415px;
+   min-width: 1240px;
+  max-height: 415px;
   border-radius: 25px;
   object-fit: cover;
 }
 
-.arrowgauche{
+.arrowgauche {
   position: absolute;
   left: 0;
- top: 50%;
- transform: translateY(-50%);
- width: 46.68px;
- height: 79.2px;
- padding-left: 15px;
- cursor: pointer;
-}
-.arrowdroite{
-  position: absolute;
-   right: 0;
   top: 50%;
   transform: translateY(-50%);
-  padding-right: 5px;
+  padding-left: 1%;
+  cursor: pointer;
+}
+
+.arrowdroite {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding-right: 4%;
   cursor: pointer;
 }
 .tag{
@@ -443,5 +447,328 @@ margin-bottom: 30px;
   position: relative;
   right: 620px;
   top: 330px;
+
+}
+
+
+
+@media (max-width: 768px) {
+  html{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+  }
+  
+  header{
+    width: 100%;
+    display: flex;
+    margin-bottom: 30px;
+  }
+
+  .logo img{
+  width: 26px;
+  margin: 0;
+  }
+  
+  header nav ul{
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    margin-top: 5px;
+    
+  }
+  
+  header nav a{
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  .banner{
+    width: 100%;
+    max-width: 335px;
+    height: 111px;
+    border-radius: 25px;
+    margin-bottom: 5px;
+  }
+
+  .banner img{
+    width: 100%;
+    max-width: 335px;
+    height: 111px;
+    margin-bottom: 60px;
+    border-radius: 25px;
+  }
+  
+  .banner h1{
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 10px;
+  }
+  
+  .Footer{
+    width: 100%;
+    height: 209px;
+  }
+  
+  .Footer p{
+    font-size: 18px;
+  }
+  
+  .cardcontenainer{
+    width: 100%;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    
+  }
+
+  .card{
+    width: 100%;
+    max-width: 335px;
+    height: 255px;
+    border-radius: 10px;
+    background-color: transparent;
+
+  }
+
+  .card img{
+  width: 100%;
+  max-width: 335px;
+    height: 255px;
+    border-radius: 10px;
+    
+
+  }
+
+  .carrouselcontainer{
+    width: 100%;
+    height: 255px;
+    margin: auto;
+
+  }
+
+  
+  .backimg {
+    width: 80%;
+    min-width: 300px;
+    height: 255px;
+    margin: auto;
+  }
+
+  .arrowdroite{
+    width: 11px;
+    height: 18px;
+    position: relative;
+    right: 12%;
+  
+  }
+
+  .arrowgauche{
+    width: 11px;
+    height: 18px;
+    position: relative;
+    left: 12%;
+
+  }
+  .photo-number p {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    color: #FFFFFF;
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    transform: translateX(-50%);
+  }
+  .undercarrousel{
+    width: 80%;
+    margin: auto;
+    flex-direction: column;
+  }
+  .HomeIntelContent{
+    display: flex;
+    align-items: start;
+  }
+
+  .HomeIntelContent h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #FF6060;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .HomeIntelContent p{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #FF6060;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+  }
+.tagcontainer{
+  width: 84px;
+  height: 18px;
+  border-radius: 5px;
+
+}
+
+.tag{
+  margin-bottom: 0;
+}
+
+.tagcontainer p{
+  font-size: 8.5px;
+}
+
+.rightunder{
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: flex-start;
+  width: 80%;
+  margin-top: 25px;
+}
+
+.ratingstars{
+display: flex;
+margin: auto;
+margin-left: 0px;
+}
+
+.starred{
+  color: #FF6060;
+  width: 13.41px;
+  height: 13px;
+  margin-right: 5px;
+}
+
+.stargrey{
+  color: #E3E3E3;
+  width: 13.41px;
+  height: 13px;
+  margin-right: 5px;
+}
+
+.hostIntel p{
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.Profilepicture{
+  width: 32px;
+  height: 32px;
+}
+
+.Profilepicture img{
+  width: 32px;
+  height: 32px;
+}
+
+.OngletIntelPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ margin-bottom: 140px;
+}
+
+.ongletIntelHome{
+  width: 90%;
+  height: 29.93px;
+  border-radius: 5px;
+}
+.ongleHometitle h3{
+  font-size: 19px;
+  margin: 0;
+  margin-top: 2px;
+  margin-left: 5px;
+  transition: all 0.8s ease;
+}
+
+.ongletIntelHome img{
+  width: 16px;
+  height: 9.14px;
+  margin: 0;
+  margin-top: 2px;
+  margin-right: 15px;
+}
+
+.ongletHomecontent{
+  width: 100%;
+  max-height: 155px;
+  
+  
+}
+
+.ongletHomecontent p{
+  font-size: 12px;
+  margin-top: 7px;
+
+}
+.ongletHomecontent li{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  padding-left: 15px;
+  padding-top: 15px;
+  color: #FF6060
+}
+.errorcontainer{
+  width: 100%;
+  
+}
+.errorcontainer h1{
+  font-size: 96px;
+  margin-bottom: 15px;
+}
+.errorcontainer p{
+font-size: 18px;
+margin-bottom: 100px;
+text-align: center;
+}
+.errorcontainer a{
+  font-size: 14px;
+}
+
+.ongletcontainer{
+  width: 90%;
+}
+
+.onglet{
+  width: 90%;
+}
+
+.ongletitle{
+  width: 100%;
+}
+
+.ongletitle h3{
+  font-size: 15px;
+}
+
+
+
+.onglet img{
+  width: 24px;
+  height: 13.71px;
+  object-fit: cover;
+  display: flex;
+  position: relative;
+  margin-left: 0;
+  left: -5%;
+  }
+
+  .ongletcontent{
+    width: 100%;
+  }
+
+  .ongletcontent p{
+    font-size: 12px;
+  }
 
 }
